@@ -1,0 +1,36 @@
+<div class="my-3 mx-3">
+  <div class="row">
+    <div class="col">
+      <h5>Edicion de Usuario</h5>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <button type="button" (click)="back()">Volver</button>
+    </div>
+  </div>
+</div>
+<form [formGroup]="formData">
+  <div class="card">
+    <div>
+      <label for="full_name">Nombre completo:</label>
+      {{ user.nombre_completo }}
+    </div>
+    <div>
+      <label for="bithdate">Fecha de nacimiento:</label>
+      {{ user.fecha_nacimiento }}
+    </div>
+    <div>
+      <label for="cellphone">Celular:</label>
+      {{ user.celular }}
+    </div>
+    <div>
+      <label for="phonenumber">Telefono fijo:</label>
+      {{ user.telefono_fijo }}
+    </div>
+    <div>
+      <label for="address">Direccion:</label>
+      {{ user.direccion }}
+    </div>
+  </div>
+</form>

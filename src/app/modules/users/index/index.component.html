@@ -1,0 +1,45 @@
+<div class="my-3 mx-3">
+  <div class="row">
+    <div class="col">
+      <h5>Listado de Usuarios</h5>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <button type="button" (click)="create()">Nuevo</button>
+    </div>
+  </div>
+</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Fecha Nacimiento</th>
+        <th>Edad</th>
+        <th>Celular</th>
+        <th>Telefono Fijo</th>
+        <th>Direccion</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersData">
+        <td>{{ user.nombre_completo }}</td>
+        <td>{{ user.fecha_nacimiento }}</td>
+        <td>{{ user.edad }}</td>
+        <td>{{ user.celular }}</td>
+        <td>{{ user.telefono_fijo }}</td>
+        <td>{{ user.direccion }}</td>
+        <td>
+          <button type="button" (click)="edit(user.nombre_completo)">
+            Editar
+          </button>
+          <button type="button" (click)="show(user.nombre_completo)">
+            Ver
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
